@@ -10,7 +10,6 @@
   <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
 </div>
 
-
 <img src="./.github/img/banner.png" alt="exemplo imagem">
 
 > Backend do sistema Autodeposite para a Biblioteca Central da UFPA, desenvolvido pela SEDEPTI
@@ -25,16 +24,17 @@ As seguintes melhorias ainda estão em aberto:
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-* Você instalou a versão mais recente de `NodeJS`, `Git`, `MySQL` e `Visual Studio Code` ou outra IDE de preferência.
-* Você tem uma máquina da sua preferência. De preferência sistemas baseados em `Debian 10`.
-* Você tem familiaridade com `Desenvolvimento backend` e outras tecnologias adicionais.
+- Você instalou a versão mais recente de `NodeJS`, `Git`, `MySQL` e `Visual Studio Code` ou outra IDE de preferência.
+- Você tem uma máquina da sua preferência. De preferência sistemas baseados em `Debian 10`.
+- Você tem familiaridade com `Desenvolvimento backend` e outras tecnologias adicionais.
 
 ## 🚀 Instalação
 
 Para instalar, siga estas etapas:
 
 Linux, Windows e macOS:
-``` 
+
+```
 git clone https://github.com/eng-gabrielscardoso/sistema-autodeposito-backend.git
 ```
 
@@ -43,9 +43,6 @@ git clone https://github.com/eng-gabrielscardoso/sistema-autodeposito-backend.gi
 ## ☕ Utilização
 
 Para usar, siga estas etapas:
-
-
-
 
 ## 📫 Contribuição
 
@@ -69,7 +66,6 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
   </tr>
 </table>
-
 
 ## 😄 Seja um dos contribuidores<br>
 

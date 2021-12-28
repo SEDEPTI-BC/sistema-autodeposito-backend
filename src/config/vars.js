@@ -2,7 +2,7 @@ const path = require('path');
 
 require('dotenv-safe').config({
   path: path.join(__dirname, '../../.env'),
-  example: path.join(__dirname, '../../.env.example')
+  example: path.join(__dirname, '../../.env.example'),
 });
 
 module.exports = {
@@ -13,5 +13,5 @@ module.exports = {
   DB_HOST: process.env.DB_HOST,
   DB_DIALECT: process.env.DB_DIALECT,
   PATH_TO_LOGS: process.env.PATH_TO_LOGS,
-  PORT: process.env.PORT
+  PORT: process.env.PORT,
 };
