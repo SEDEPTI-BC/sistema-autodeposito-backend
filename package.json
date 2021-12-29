@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/main.js",
   "scripts": {
+    "create": "npx sequelize-cli db:create",
     "dev": "nodemon ./src/main.js",
     "test": "jest",
     "migrate": "npx sequelize-cli db:migrate"
@@ -29,6 +30,7 @@
     "git-commit-msg-linter": "^3.2.8",
     "jest": "^27.4.5",
     "nodemon": "^2.0.15",
-    "prettier": "2.5.1"
+    "prettier": "2.5.1",
+    "sequelize-cli": "^6.3.0"
   }
 }

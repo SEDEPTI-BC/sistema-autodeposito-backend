@@ -60,7 +60,13 @@ const loggerConfiguration = {
 const logger = Winston.createLogger(loggerConfiguration);
 
 logger.stream = {
+  write: message => logger.error(message.trim()),
+  write: message => logger.warn(message.trim()),
   write: message => logger.info(message.trim()),
+  write: message => logger.http(message.trim()),
+  write: message => logger.verbose(message.trim()),
+  write: message => logger.debug(message.trim()),
+  write: message => logger.silly(message.trim()),
 };
 
 module.exports = logger;
