@@ -1,8 +1,6 @@
 require('dotenv-safe').config();
 const Winston = require('winston');
 
-// TODO: conectar logger com o banco de dados
-// TODO: fazer um logger para cada processo
 // FIXME: alterar o import das variáveis de ambiente
 // FIXME: melhorar o código
 
