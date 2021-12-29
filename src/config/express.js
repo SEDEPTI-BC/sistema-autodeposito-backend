@@ -14,6 +14,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // configuração do cors
 app.use(cors());
 // configuração de rotas
-// app.use('routes', routes)
+app.use(routes);
 
 module.exports = app;
