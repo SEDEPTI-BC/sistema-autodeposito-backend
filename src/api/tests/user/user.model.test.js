@@ -2,6 +2,7 @@ const { DataTypes } = require('sequelize');
 const connection = require('../../../db/connection');
 const db = require('../../../db/database');
 const user = require('../../models/user');
+const truncate = require('../utils/truncate');
 
 describe('user model', () => {
   beforeAll(async () => {
