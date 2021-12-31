@@ -7,14 +7,14 @@ class UserController {
     const { username, email, password, role } = req.body;
 
     try {
-      const user = await userRepository.create({
+      await userRepository.create({
         username,
         email,
         password,
         role,
       });
 
-      res.status(201).json({ message: 'User created' });
+      res.status(201).json({ username, email });
     } catch {
       res.status(404).json({ error: 'User already exists' });
     }

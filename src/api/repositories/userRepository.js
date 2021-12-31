@@ -18,14 +18,15 @@ class UserRepository {
       throw new Error('User already exists');
     } else {
       const saltRounds = 10;
-      bcrypt.hash(password, saltRounds, async function (err, hash) {
-        await User.create({
-          username,
-          email,
-          password: hash,
-          role,
-        });
+      const hashedPassword = await bcrypt.hash(password, saltRounds);
+
+      const newUser = await User.create({
+        username,
+        email,
+        password: hashedPassword,
+        role,
       });
+      return newUser;
     }
   }
 }

@@ -1,7 +1,7 @@
 const path = require('path');
 
 require('dotenv-safe').config({
-  path: path.join(__dirname, '../../.env'),
+  path: process.env.NODE_ENV === 'test' ? '.env.test' : '.env',
   example: path.join(__dirname, '../../.env.example'),
 });
 
@@ -14,4 +14,5 @@ module.exports = {
   DB_DIALECT: process.env.DB_DIALECT,
   PATH_TO_LOGS: process.env.PATH_TO_LOGS,
   PORT: process.env.PORT,
+  DB_STORAGE: './src/api/tests/database.sqlite',
 };

@@ -6,8 +6,10 @@
   "scripts": {
     "create": "npx sequelize-cli db:create",
     "dev": "nodemon ./src/main.js",
-    "test": "jest",
-    "migrate": "npx sequelize-cli db:migrate"
+    "pretest": "NODE_ENV=test sequelize db:migrate",
+    "test": "NODE_ENV=test jest",
+    "migrate": "npx sequelize-cli db:migrate",
+    "posttest": "NODE_ENV=test sequelize db:migrate:undo:all"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +35,8 @@
     "jest": "^27.4.5",
     "nodemon": "^2.0.15",
     "prettier": "2.5.1",
-    "sequelize-cli": "^6.3.0"
+    "sequelize-cli": "^6.3.0",
+    "sqlite3": "^5.0.2",
+    "supertest": "^6.1.6"
   }
 }
