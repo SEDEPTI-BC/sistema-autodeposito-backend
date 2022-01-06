@@ -4,17 +4,17 @@ class UserController {
   constructor() {}
 
   async create(req, res, next) {
-    const { username, email, password, role } = req.body;
+    const { name, email, password, role } = req.body;
 
     try {
       await userRepository.create({
-        username,
+        name,
         email,
         password,
         role,
       });
 
-      res.status(201).json({ username, email });
+      res.status(201).json({ name, email });
     } catch {
       res.status(404).json({ error: 'User already exists' });
     }

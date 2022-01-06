@@ -1,7 +1,7 @@
 const { body, checkSchema, validationResult } = require('express-validator');
 
 const userCreationSchema = {
-  username: {
+  name: {
     isLength: {
       errorMessage: 'username must have at least 5 characters.',
       options: { min: 5 },
@@ -24,7 +24,7 @@ const userCreationSchema = {
   role: {
     isIn: {
       errorMessage: 'role must be admin, root or normal.',
-      options: [['admin', 'root', 'normal']],
+      options: [['admin', 'root', 'depositor']],
     },
   },
 };

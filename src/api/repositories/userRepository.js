@@ -6,13 +6,13 @@ const bcrypt = require('bcrypt');
 
 class UserRepository {
   constructor() {}
-  async create({ username, email, password, role }) {
+  async create({ name, email, password, role }) {
     await connection;
 
     const User = user(db, DataTypes);
 
     // verifica se já existe um usuario com o mesmo username
-    const userAlreadyExists = await User.findOne({ where: { username } });
+    const userAlreadyExists = await User.findOne({ where: { name } });
 
     if (userAlreadyExists) {
       throw new Error('User already exists');
@@ -21,7 +21,7 @@ class UserRepository {
       const hashedPassword = await bcrypt.hash(password, saltRounds);
 
       const newUser = await User.create({
-        username,
+        name,
         email,
         password: hashedPassword,
         role,
